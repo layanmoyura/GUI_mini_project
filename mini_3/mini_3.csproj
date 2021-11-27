@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69BFBC2F-D56A-4E70-A594-5B88B1913078}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>mini_3</RootNamespace>
+    <AssemblyName>mini_3</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Adminreg.xaml.cs">
+      <DependentUpon>Adminreg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Databaserepo.cs" />
+    <Compile Include="Migrations\202108140525174_InitialCreate.cs" />
+    <Compile Include="Migrations\202108140525174_InitialCreate.designer.cs">
+      <DependentUpon>202108140525174_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108140548208_m1.cs" />
+    <Compile Include="Migrations\202108140548208_m1.designer.cs">
+      <DependentUpon>202108140548208_m1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108230917586_m2.cs" />
+    <Compile Include="Migrations\202108230917586_m2.designer.cs">
+      <DependentUpon>202108230917586_m2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108231548277_m3.cs" />
+    <Compile Include="Migrations\202108231548277_m3.designer.cs">
+      <DependentUpon>202108231548277_m3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241408533_m4.cs" />
+    <Compile Include="Migrations\202108241408533_m4.designer.cs">
+      <DependentUpon>202108241408533_m4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241411456_m5.cs" />
+    <Compile Include="Migrations\202108241411456_m5.designer.cs">
+      <DependentUpon>202108241411456_m5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241418164_m6.cs" />
+    <Compile Include="Migrations\202108241418164_m6.designer.cs">
+      <DependentUpon>202108241418164_m6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241431005_m7.cs" />
+    <Compile Include="Migrations\202108241431005_m7.designer.cs">
+      <DependentUpon>202108241431005_m7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241433483_m8.cs" />
+    <Compile Include="Migrations\202108241433483_m8.designer.cs">
+      <DependentUpon>202108241433483_m8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241514008_m9.cs" />
+    <Compile Include="Migrations\202108241514008_m9.designer.cs">
+      <DependentUpon>202108241514008_m9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241551535_m10.cs" />
+    <Compile Include="Migrations\202108241551535_m10.designer.cs">
+      <DependentUpon>202108241551535_m10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241554200_m11.cs" />
+    <Compile Include="Migrations\202108241554200_m11.designer.cs">
+      <DependentUpon>202108241554200_m11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108241936280_m12.cs" />
+    <Compile Include="Migrations\202108241936280_m12.designer.cs">
+      <DependentUpon>202108241936280_m12.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108242004465_m13.cs" />
+    <Compile Include="Migrations\202108242004465_m13.designer.cs">
+      <DependentUpon>202108242004465_m13.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251102500_m14.cs" />
+    <Compile Include="Migrations\202108251102500_m14.designer.cs">
+      <DependentUpon>202108251102500_m14.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251133406_m15.cs" />
+    <Compile Include="Migrations\202108251133406_m15.designer.cs">
+      <DependentUpon>202108251133406_m15.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108251200561_m16.cs" />
+    <Compile Include="Migrations\202108251200561_m16.designer.cs">
+      <DependentUpon>202108251200561_m16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108290626132_16.cs" />
+    <Compile Include="Migrations\202108290626132_16.designer.cs">
+      <DependentUpon>202108290626132_16.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108291548279_18.cs" />
+    <Compile Include="Migrations\202108291548279_18.designer.cs">
+      <DependentUpon>202108291548279_18.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202108291553178_20.cs" />
+    <Compile Include="Migrations\202108291553178_20.designer.cs">
+      <DependentUpon>202108291553178_20.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Class.cs" />
+    <Compile Include="Models\Notice.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Station.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\Train.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Registeru.xaml.cs">
+      <DependentUpon>Registeru.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.cs">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window10.xaml.cs">
+      <DependentUpon>Window10.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window11.xaml.cs">
+      <DependentUpon>Window11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window12.xaml.cs">
+      <DependentUpon>Window12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window2.xaml.cs">
+      <DependentUpon>Window2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window3.xaml.cs">
+      <DependentUpon>Window3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window4.xaml.cs">
+      <DependentUpon>Window4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window5.xaml.cs">
+      <DependentUpon>Window5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window6.xaml.cs">
+      <DependentUpon>Window6.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window7.xaml.cs">
+      <DependentUpon>Window7.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window8.xaml.cs">
+      <DependentUpon>Window8.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window9.xaml.cs">
+      <DependentUpon>Window9.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Adminreg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registeru.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="user login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="user login.xaml.cs">
+      <DependentUpon>user login.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window12.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Window2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window6.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window7.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window8.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window9.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Migrations\202108140525174_InitialCreate.resx">
+      <DependentUpon>202108140525174_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108140548208_m1.resx">
+      <DependentUpon>202108140548208_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108230917586_m2.resx">
+      <DependentUpon>202108230917586_m2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108231548277_m3.resx">
+      <DependentUpon>202108231548277_m3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241408533_m4.resx">
+      <DependentUpon>202108241408533_m4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241411456_m5.resx">
+      <DependentUpon>202108241411456_m5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241418164_m6.resx">
+      <DependentUpon>202108241418164_m6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241431005_m7.resx">
+      <DependentUpon>202108241431005_m7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241433483_m8.resx">
+      <DependentUpon>202108241433483_m8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241514008_m9.resx">
+      <DependentUpon>202108241514008_m9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241551535_m10.resx">
+      <DependentUpon>202108241551535_m10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241554200_m11.resx">
+      <DependentUpon>202108241554200_m11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108241936280_m12.resx">
+      <DependentUpon>202108241936280_m12.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108242004465_m13.resx">
+      <DependentUpon>202108242004465_m13.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251102500_m14.resx">
+      <DependentUpon>202108251102500_m14.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251133406_m15.resx">
+      <DependentUpon>202108251133406_m15.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108251200561_m16.resx">
+      <DependentUpon>202108251200561_m16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108290626132_16.resx">
+      <DependentUpon>202108290626132_16.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108291548279_18.resx">
+      <DependentUpon>202108291548279_18.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202108291553178_20.resx">
+      <DependentUpon>202108291553178_20.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="gratis-png-silueta-de-ilustracion-de-tren-transporte-ferroviario-iconos-de-computadora-de-transito-rapido-transporte-guardar-formato-de-icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="computer-icons-user-profile-user-account-png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images123.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="PR11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="high-speed-train_23-2147510731.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pws1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psw2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="psw3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sgfbfsbfbfsbfsb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="schedule.png" />
+    <Resource Include="ticket.png" />
+    <Resource Include="train.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="addstation.png" />
+    <Resource Include="data.png" />
+    <Resource Include="load.png" />
+    <Resource Include="notice1.png" />
+    <Resource Include="price.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="password.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

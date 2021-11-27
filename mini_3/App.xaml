@@ -1,0 +1,9 @@
+﻿<Application x:Class="mini_3.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:mini_3"
+             StartupUri="user login.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
